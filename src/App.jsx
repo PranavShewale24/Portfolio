@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import MicroSlats from './MicroSlats';
 import FlipCard from './FlipCard';
 import pranavImage from './pranav.jpg';
+import resumeFile from './C2K231211_PranavShewale_Resume.pdf';
 import './App.css';
 
 /* ---------- React Bits-style components ---------- */
@@ -71,6 +72,8 @@ const Marquee = ({ items }) => (
 const EMAIL = 'pranavshewale2852@gmail.com';
 const LINKEDIN = 'https://www.linkedin.com/in/pranav-shewale24/';
 const GITHUB = 'https://github.com/pranavshewale24';
+const LEETCODE = 'https://leetcode.com/u/45_v_22/';
+const CODECHEF = 'https://www.codechef.com/users/p_2409';
 
 const projects = [
   {
@@ -92,13 +95,13 @@ const projects = [
     l: ['One-click SOS emergency request', 'Ambulance and volunteer driver management', 'Driver online/offline availability', 'Real-time emergency request handling', 'Nearby hospital finder with location tracking and navigation', 'Patient, driver, hospital and admin dashboards', 'Role-based authentication']
   },
   {
-    t: 'DevCollab – DSA Tracker',
-    d: 'A full-stack DSA tracking platform that centralizes coding practice, progress tracking and preparation analytics.',
-    problem: 'Students preparing for coding interviews often practice DSA problems across multiple platforms, making it difficult to organize questions, track solved problems, identify weak topics and measure preparation.',
-    solution: 'I developed DevCollab as a centralized preparation workspace where users explore curated problems by topic, mark their progress and view analytics that show their overall preparation level.',
-    frontStack: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS'],
-    s: ['React.js', 'JavaScript', 'Tailwind CSS', 'Node.js', 'Express.js', 'JWT', 'REST APIs', 'React Router', 'Git/GitHub', 'Postman'],
-    l: ['DSA topic-wise problem organization', 'Curated coding problems', 'Problem-solving progress tracking', 'Solved and in-progress status', 'Topic-wise progress', 'Overall preparation analytics', 'User authentication and personalized dashboard']
+    t: 'DevCollab – Developer Collaboration Platform',
+    d: 'A developer collaboration platform for publishing projects, finding teammates, communicating and managing project work together.',
+    problem: 'Developers often struggle to find suitable teammates, discover relevant projects and manage communication, team members and tasks across separate tools.',
+    solution: 'I built DevCollab so developers can publish project ideas and requirements, browse opportunities, send join requests, approve teammates and collaborate through project-based chat and task management.',
+    frontStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
+    s: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
+    l: ['Project publishing with requirements', 'Project discovery and join requests', 'Owner approval and team management', 'Project-based real-time chat', 'Task creation and assignment', 'Task progress tracking', 'Centralized project collaboration workflow']
   },
 ];
 const skills = ['C++', 'JavaScript', 'SQL', 'HTML', 'CSS', 'React.js', 'Node.js', 'Express.js', 'REST APIs', 'JWT Auth', 'Postman', 'Git & GitHub', 'DSA', 'OOP', 'DBMS', 'OS', 'CNS'];
@@ -148,10 +151,11 @@ export default function App() {
         <div className="hero-copy">
           <span className="pill">● Open to internships & full-time roles</span>
           <h1><SplitText text={'Hi, I\u2019m '} /><SplitText text="Pranav Shewale" className="grad" /></h1>
-          <p className="sub"><ShinyText>Computer Engineering student & full-stack developer building fast, real-time web products and solving problems on the side.</ShinyText></p>
+          <p className="sub"><ShinyText>Computer Engineering student and Software Developer building fast, real-time web products and solving problems on the side.</ShinyText></p>
           <div className="btns">
             <a className="btn p" href="#projects">View projects</a>
             <a className="btn" href={`mailto:${EMAIL}`}>Get in touch</a>
+            <a className="btn" href={resumeFile} download="Pranav-Shewale-Resume.pdf">Download resume</a>
           </div>
         </div>
         <figure className="hero-portrait">
@@ -186,7 +190,7 @@ export default function App() {
         <h2>Experience</h2>
         <div className="tl">
           <SpotlightCard>
-            <small>Jan 1 – Mar 15, 2025</small>
+            <small>Jan 1 – Mar 15, 2026</small>
             <h3>In-House Intern — Emergency Healthcare System</h3>
             <div className="tags">{['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Google Maps API'].map(x => <span key={x}>{x}</span>)}</div>
             <ul>
@@ -230,6 +234,8 @@ export default function App() {
           <a className="btn p" href={`mailto:${EMAIL}`}>{EMAIL}</a>
           <a className="btn" href={LINKEDIN}>LinkedIn</a>
           <a className="btn" href={GITHUB}>GitHub</a>
+          <a className="btn" href={LEETCODE}>LeetCode</a>
+          <a className="btn" href={CODECHEF}>CodeChef</a>
         </div>
       </Reveal></footer>
     </>
